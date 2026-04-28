@@ -2,511 +2,406 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>AnglerBI - Business Intelligence Simplified</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angler BI — Business Intelligence Consulting</title>
+    <meta name="description"
+        content="Angler BI delivers expert business intelligence consulting — data strategy, Power BI dashboards, and predictive analytics. Based in Miami, FL.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/favicon.ico" alt="Logo" width="45" height="35">
+<body>
+
+    <!-- ══════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════ -->
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+                <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
             </a>
-            <a class="navbar-brand" href="#page-top">Angler BI</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contact">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
-    <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading text-uppercase mb-0">Casting a wider net on your data insights</h1>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
-                <div class="divider-custom-line"></div>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+        </ul>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+    <section id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Intelligent Data Solutions</div>
+            <h1 class="hero-headline">
+                Cast a wider<br>
+                net on your <br> <span class="text-accent">data insights</span>
+            </h1>
+            <p class="hero-sub">
+                Angler BI transforms raw data into strategic intelligence. From enterprise dashboards to automated
+                processes, we help businesses make decisions with confidence.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+                <a href="#work" class="btn btn-ghost">How We Work<i class="fas fa-arrow-right"></i></a>
             </div>
-            <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">Business Intelligence, simplified.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">25%</span>
+                    <span class="stat-label">Avg. ROI Lift</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Client Focused</span>
+                </div>
+            </div>
         </div>
-    </header>
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
-                    </div>
-                </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
-                    </div>
-                </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                    </div>
-                </div>
-                <!-- Portfolio Item 4-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                    </div>
-                </div>
-                <!-- Portfolio Item 5-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                    </div>
-                </div>
-                <!-- Portfolio Item 6-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                    </div>
-                </div>
-            </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
-    <!-- About Section-->
-    <section class="page-section bg-primary text-white mb-0" id="about">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- About Section Content-->
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <p class="lead">At Angler BI, our mission is to provide innovative business intelligence solutions
-                        that make a real difference. We are committed to maintaining integrity with every data point and
-                        insight we deliver, ensuring you can trust us to help propel your business forward.</p>
 
-                    <p class="lead">Our core values are deeply embedded in our daily operations and drive our commitment
-                        to excellence:
-                    <ul>
-                        <li><strong>Innovation:</strong> We constantly improve and innovate to stay at the cutting edge
-                            of business intelligence technology.</li>
-                        <li><strong>Integrity:</strong> We treat your data with the utmost respect and confidentiality.
-                        </li>
-                        <li><strong>Insight:</strong> We strive to transform data into insights that are not only
-                            comprehensive but also easy to understand and act upon.</li>
+    <!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Intelligence, <b></b><em>built for action</em></h2>
+                <p class="section-desc">We don't just present data — we engineer the systems and strategies that make it
+                    work for your business.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-route"></i></div>
+                    <h3>Data Strategy & Roadmap</h3>
+                    <p>We align your data initiatives with your core business goals — governance frameworks,
+                        architecture decisions, and a clear path forward.</p>
+                    <ul class="service-list">
+                        <li>Data architecture design</li>
+                        <li>Governance frameworks</li>
+                        <li>KPI definition & alignment</li>
+                        <li>BI tool selection & implementation</li>
                     </ul>
-                    </p>
-
-                    <p class="lead">We believe in not just providing solutions but also empowering our clients through
-                        education and support. Our tools are designed with the user in mind, making it easier than ever
-                        to understand your data and make informed decisions quickly and confidently. Whether you're a
-                        startup looking to understand consumer behavior, or a multinational in need of robust data
-                        integration, Angler BI is your trusted partner in navigating the complex world of data.</p>
                 </div>
-            </div>
-
-            <!-- About Section Button-->
-            <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                    <i class="fas fa-download me-2"></i>
-                    Free Download!
-                </a>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Power BI Dashboards</h3>
+                    <p>Interactive, real-time dashboards that bring your data to life. Drill-downs, KPI tracking, and
+                        automated alerts — built for decision-makers.</p>
+                    <ul class="service-list">
+                        <li>Custom dashboard design</li>
+                        <li>CRM & ERP integration</li>
+                        <li>Automated data refresh</li>
+                        <li>Executive reporting suites</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Machine learning models that forecast demand, identify churn, and surface opportunities before
+                        they're visible to the competition.</p>
+                    <ul class="service-list">
+                        <li>Churn prediction models</li>
+                        <li>Demand forecasting</li>
+                        <li>Trend identification</li>
+                        <li>Risk analysis & mitigation</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section-->
-    <section class="page-section" id="contact">
+
+    <!-- ══════════════════════════════════════════════
+     WORK
+══════════════════════════════════════════════ -->
+    <section id="work" class="section section-dark">
         <div class="container">
-            <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Us</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="far fa-comments" aria-hidden="true"></i></div>
-                <div class="divider-custom-line"></div>
+            <div class="section-header">
+                <span class="section-tag">How We Work</span>
+                <h2 class="section-title">A proven path from <em>data to decisions</em></h2>
+                <p class="section-desc">Every engagement starts with understanding your business — not your data. The
+                    data follows. Here's how we get you there.</p>
             </div>
-            <!-- Contact Section Form-->
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <form target="_blank" action="https://formsubmit.co/mrbrandonf@aol.com" method="POST">
+
+            <!-- Process Steps -->
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="process-num">01</div>
+                    <div class="process-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    <h3>Discover</h3>
+                    <p>We immerse ourselves in your business — your goals, your gaps, and the data landscape you're
+                        working with today. No assumptions. No cookie-cutter templates. Just deep listening and sharper
+                        questions.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">02</div>
+                    <div class="process-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>Architect</h3>
+                    <p>We design the right infrastructure for your scale — data models, pipeline designs, and tool
+                        selections that fit your organization's reality, not just industry best practices on paper.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">03</div>
+                    <div class="process-icon"><i class="fas fa-hammer"></i></div>
+                    <h3>Build & Deploy</h3>
+                    <p>From interactive dashboards to predictive models, we build and deploy solutions that integrate
+                        seamlessly into your existing workflows — with adoption in mind from day one.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">04</div>
+                    <div class="process-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                    <h3>Optimize & Scale</h3>
+                    <p>Data needs evolve as businesses grow. We stay close — monitoring performance, refining models,
+                        and ensuring your intelligence infrastructure scales confidently alongside you.</p>
+                </div>
+            </div>
+
+            <!-- Impact Metrics -->
+            <div class="work-impact reveal">
+                <div class="impact-stat">
+                    <span class="impact-num">80%</span>
+                    <span class="impact-label">Reduction in manual reporting time</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">3×</span>
+                    <span class="impact-label">Faster decision-making cycles</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">25%</span>
+                    <span class="impact-label">Average ROI improvement</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">100%</span>
+                    <span class="impact-label">Client retention rate</span>
+                </div>
+            </div>
+
+            <!-- Outcome Pillars -->
+            <div class="outcomes-grid">
+                <div class="outcome-card reveal">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Clarity at every level</h4>
+                    <p>Executives get the strategic picture. Managers get operational depth. Analysts get the
+                        granularity they need. We build intelligence that speaks to every layer of your organization.
+                    </p>
+                </div>
+                <div class="outcome-card reveal">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Decisions that move fast</h4>
+                    <p>We eliminate the bottleneck between data collection and confident action. Real-time visibility
+                        means your team stops waiting for the weekly report and starts leading with insight.</p>
+                </div>
+                <div class="outcome-card reveal">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h4>Infrastructure built to scale</h4>
+                    <p>We don't build for today's headcount or yesterday's tools. Every architecture decision
+                        anticipates your next stage of growth. The foundation you invest in now carries you through
+                        whatever comes next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-tag">About Angler BI</span>
+                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Data clarity for <em>every
+                            decision</em></h2>
+                    <p class="about-lead">At Angler BI, we believe great decisions are made from clear data. We partner
+                        with businesses to build the intelligence infrastructure that makes that clarity possible and
+                        sustainable.</p>
+                    <p class="about-body">We combine deep technical expertise in BI tooling with a practical
+                        understanding of business strategy, ensuring every solution we build isn't just technically
+                        sound, but immediately useful to the people who rely on it.</p>
+                    <div class="values-grid">
+                        <div class="value">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Constantly improving our methods to stay at the cutting edge of BI technology.</p>
+                        </div>
+                        <div class="value">
+                            <i class="fas fa-shield-halved"></i>
+                            <h4>Integrity</h4>
+                            <p>Your data is treated with the utmost respect, security, and confidentiality.</p>
+                        </div>
+                        <div class="value">
+                            <i class="fas fa-eye"></i>
+                            <h4>Insight</h4>
+                            <p>We transform complexity into clarity. We curate insights that are actionable, not
+                                academic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-aside reveal">
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h5>Headquartered in</h5>
+                            <p>Miami, Florida</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-scale-balanced"></i></div>
+                        <div>
+                            <h5>Our Philosophy</h5>
+                            <p>The right tool for the job, not just the latest buzzword</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h5>Our Approach</h5>
+                            <p>Transparent, long-term partnerships</p>
+                        </div>
+                    </div>
+                    <blockquote class="about-quote">
+                        "We don't just deliver reports. We build the infrastructure for a data-driven culture."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Let's talk <em>data</em></h2>
+                    <p>Ready to harness your data? Tell us about your business and we'll set up a complimentary
+                        discovery call to explore what's possible.</p>
+                    <div class="contact-details">
+                        <a href="mailto:contact@anglerbi.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@anglerbi.com</span>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Miami, Florida</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal">
+                    <form action="https://formsubmit.co/contact@anglerbi.com" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="New Angler BI Inquiry">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-row">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email Address"
-                                    required>
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required>
                             </div>
-                            <div class="form-group">
-                                <textarea placeholder="Your Message" class="form-control" name="message" rows="5"
-                                    required></textarea>
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-lg btn-dark">Submit Form</button>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us about your data challenges..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <img src="assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+                        <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
+                    </a>
+                    <p>Business Intelligence Consulting<br>Miami, Florida</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h5>Connect</h5>
+                    <a href="mailto:contact@anglerbi.com">contact@anglerbi.com</a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
-
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Location-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
-                    <p class="lead mb-0">
-                        Miami, FL
-                    </p>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Angler Business Intelligence, LLC. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
-                <!-- Footer Social Icons-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                </div>
-                <!-- Footer About Text-->
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">Ready to Transform Your Data Insights?</h4>
-                    <p class="lead">Connect with our team of data experts today and start your journey towards
-                        data-driven decision making. We're excited to work with you and help unlock your business's
-                        potential.</p>
-                    <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
-                </div>
-
             </div>
         </div>
     </footer>
-    <!-- Copyright Section-->
 
-    <!-- Portfolio Modals-->
-    <!-- Portfolio Modal 1-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Engineer
-                                    Utilization</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Embed Power BI Report instead of image-->
-                                <iframe
-                                    src="https://app.powerbi.com/view?r=eyJrIjoiMDllOThjODUtZDA3OC00Mjg3LThjOWItMDc0NGY3NTIxNjE2IiwidCI6ImZlMTYxMDVjLTJjZDQtNDQ0Ny1iMDVmLTQ0MGNiMjMzMDQxYSIsImMiOjF9"
-                                    frameborder="0" style="width: 100%; height: 600px;"
-                                    allowFullScreen="false"></iframe>
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Design and develop customized Power BI dashboards tailored to your
-                                    organization's specific business needs.
-                                    Incorporate interactive visualizations, drill-down capabilities, and scheduled data
-                                    updates for comprehensive data analysis.</p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2-->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 3-->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 4-->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 5-->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 6-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-database" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png"
-                                    alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>

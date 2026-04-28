@@ -1,0 +1,262 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Angler BI Logo Angler BI" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+        - img "Angler BI Logo" [ref=e5]
+        - generic [ref=e6]: Angler
+        - generic [ref=e7]: BI
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Services" [ref=e10] [cursor=pointer]:
+            - /url: "#services"
+        - listitem [ref=e11]:
+          - link "Work" [ref=e12] [cursor=pointer]:
+            - /url: "#work"
+        - listitem [ref=e13]:
+          - link "About" [ref=e14] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e15]:
+          - link "Get In Touch" [ref=e16] [cursor=pointer]:
+            - /url: "#contact"
+  - generic:
+    - list:
+      - listitem:
+        - link "Services":
+          - /url: "#services"
+      - listitem:
+        - link "Work":
+          - /url: "#work"
+      - listitem:
+        - link "About":
+          - /url: "#about"
+      - listitem:
+        - link "Get In Touch":
+          - /url: "#contact"
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]: Business Intelligence Consulting
+      - heading "Cast a wider net on your data insights" [level=1] [ref=e20]:
+        - text: Cast a wider
+        - text: net on your
+        - text: data insights
+      - paragraph [ref=e21]: Angler BI transforms raw data into strategic intelligence. From Power BI dashboards to predictive analytics, we help businesses make decisions with confidence.
+      - generic [ref=e22]:
+        - link "Start a Conversation" [ref=e23] [cursor=pointer]:
+          - /url: "#contact"
+        - link "View Our Work" [ref=e24] [cursor=pointer]:
+          - /url: "#work"
+          - text: View Our Work
+          - img [ref=e25]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]: 3+
+          - generic [ref=e30]: Years Experience
+        - generic [ref=e32]:
+          - generic [ref=e33]: 25%
+          - generic [ref=e34]: Avg. ROI Lift
+        - generic [ref=e36]:
+          - generic [ref=e37]: 100%
+          - generic [ref=e38]: Client Focused
+    - generic [ref=e40]: Scroll
+  - generic [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]: What We Do
+      - heading "Intelligence, built for action" [level=2] [ref=e46]:
+        - text: Intelligence,
+        - emphasis [ref=e47]: built for action
+      - paragraph [ref=e48]: We don't just present data — we engineer the systems and strategies that make it work for your business.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - img [ref=e52]
+        - heading "Data Strategy & Roadmap" [level=3] [ref=e54]
+        - paragraph [ref=e55]: We align your data initiatives with your core business goals — governance frameworks, architecture decisions, and a clear path forward.
+        - list [ref=e56]:
+          - listitem [ref=e57]: — Data architecture design
+          - listitem [ref=e58]: — Governance frameworks
+          - listitem [ref=e59]: — KPI definition & alignment
+          - listitem [ref=e60]: — BI tool selection & implementation
+      - generic [ref=e61]:
+        - img [ref=e63]
+        - heading "Power BI Dashboards" [level=3] [ref=e65]
+        - paragraph [ref=e66]: Interactive, real-time dashboards that bring your data to life. Drill-downs, KPI tracking, and automated alerts — built for decision-makers.
+        - list [ref=e67]:
+          - listitem [ref=e68]: — Custom dashboard design
+          - listitem [ref=e69]: — CRM & ERP integration
+          - listitem [ref=e70]: — Automated data refresh
+          - listitem [ref=e71]: — Executive reporting suites
+      - generic [ref=e72]:
+        - img [ref=e74]
+        - heading "Predictive Analytics" [level=3] [ref=e76]
+        - paragraph [ref=e77]: Machine learning models that forecast demand, identify churn, and surface opportunities before they're visible to the competition.
+        - list [ref=e78]:
+          - listitem [ref=e79]: — Churn prediction models
+          - listitem [ref=e80]: — Demand forecasting
+          - listitem [ref=e81]: — Trend identification
+          - listitem [ref=e82]: — Risk analysis & mitigation
+  - generic [ref=e84]:
+    - generic [ref=e85]:
+      - generic [ref=e86]: Our Work
+      - heading "Intelligence in practice" [level=2] [ref=e87]:
+        - text: Intelligence
+        - emphasis [ref=e88]: in practice
+      - paragraph [ref=e89]: A look at how we've helped organizations gain clarity from their data.
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]: Power BI · Engineering
+        - heading "Engineer Utilization Dashboard" [level=3] [ref=e93]
+        - paragraph [ref=e94]: Built a real-time engineer utilization dashboard pulling live data across project assignments, availability, and capacity planning. Leadership gained instant, actionable visibility into resource allocation across the entire engineering organization.
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - img [ref=e97]
+            - text: 50% faster identification of resource gaps
+          - listitem [ref=e99]:
+            - img [ref=e100]
+            - text: Eliminated manual weekly reporting workflows
+          - listitem [ref=e102]:
+            - img [ref=e103]
+            - text: Real-time capacity planning across all teams
+        - link "Build something similar" [ref=e105] [cursor=pointer]:
+          - /url: "#contact"
+      - iframe [ref=e108]:
+        - generic [active] [ref=f1e1]:
+          - img "Power BI loading" [ref=f1e4]
+          - generic [ref=f1e13]:
+            - link "Microsoft Power BI (Opens in new tab)" [ref=f1e14] [cursor=pointer]:
+              - /url: https://go.microsoft.com/fwlink/?LinkID=722383&clcid=0x409
+              - text: Microsoft Power BI
+            - generic:
+              - generic:  
+            - generic [ref=f1e15]:
+              - button "About Power BI" [ref=f1e16] [cursor=pointer]:
+                - generic [ref=f1e17]: 
+              - link "Flag this content as inappropriate":
+                - /url: https://learn.microsoft.com/power-bi/support/service-support-options#how-do-i-contact-support
+                - generic [ref=f1e18] [cursor=pointer]: 
+              - button "Open in full-screen mode" [ref=f1e19] [cursor=pointer]:
+                - generic [ref=f1e20]: 
+  - generic [ref=e111]:
+    - generic [ref=e112]:
+      - generic [ref=e113]: About Angler BI
+      - heading "Data clarity for every decision" [level=2] [ref=e114]:
+        - text: Data clarity for
+        - emphasis [ref=e115]: every decision
+      - paragraph [ref=e116]: At Angler BI, we believe great decisions are made from clear data. We partner with businesses to build the intelligence infrastructure that makes that clarity possible — and sustainable.
+      - paragraph [ref=e117]: We combine deep technical expertise in BI tooling with a practical understanding of business strategy, ensuring every solution we build isn't just technically sound, but immediately useful to the people who rely on it.
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - img [ref=e120]
+          - heading "Innovation" [level=4] [ref=e122]
+          - paragraph [ref=e123]: Constantly improving our methods to stay at the cutting edge of BI technology.
+        - generic [ref=e124]:
+          - img [ref=e125]
+          - heading "Integrity" [level=4] [ref=e127]
+          - paragraph [ref=e128]: Your data is treated with the utmost respect, security, and confidentiality.
+        - generic [ref=e129]:
+          - img [ref=e130]
+          - heading "Insight" [level=4] [ref=e132]
+          - paragraph [ref=e133]: We transform complexity into clarity — insights that are actionable, not academic.
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - img [ref=e137]
+        - generic [ref=e139]:
+          - heading "Headquartered in" [level=5] [ref=e140]
+          - paragraph [ref=e141]: Miami, Florida
+      - generic [ref=e142]:
+        - img [ref=e144]
+        - generic [ref=e146]:
+          - heading "Primary Tools" [level=5] [ref=e147]
+          - paragraph [ref=e148]: Power BI, Azure, Python, SQL
+      - generic [ref=e149]:
+        - img [ref=e151]
+        - generic [ref=e153]:
+          - heading "Our Approach" [level=5] [ref=e154]
+          - paragraph [ref=e155]: Transparent, long-term partnerships
+      - blockquote [ref=e156]: "\"We don't just deliver reports. We build the infrastructure for a data-driven culture.\""
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - generic [ref=e161]: Contact
+      - heading "Let's talk data" [level=2] [ref=e162]:
+        - text: Let's talk
+        - emphasis [ref=e163]: data
+      - paragraph [ref=e164]: Ready to harness your data? Tell us about your business and we'll set up a complimentary discovery call to explore what's possible.
+      - generic [ref=e165]:
+        - link "contact@anglerbi.com" [ref=e166] [cursor=pointer]:
+          - /url: mailto:contact@anglerbi.com
+          - img [ref=e167]
+          - generic [ref=e169]: contact@anglerbi.com
+        - generic [ref=e170]:
+          - img [ref=e171]
+          - generic [ref=e173]: Miami, Florida
+      - generic [ref=e174]:
+        - link "LinkedIn" [ref=e175] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e176]
+        - link "Twitter" [ref=e178] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e179]
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]:
+          - generic [ref=e185]: Full Name
+          - textbox "Full Name" [ref=e186]:
+            - /placeholder: Your name
+        - generic [ref=e187]:
+          - generic [ref=e188]: Email Address
+          - textbox "Email Address" [ref=e189]:
+            - /placeholder: you@company.com
+      - generic [ref=e190]:
+        - generic [ref=e191]: Company
+        - textbox "Company" [ref=e192]:
+          - /placeholder: Your company name
+      - generic [ref=e193]:
+        - generic [ref=e194]: Message
+        - textbox "Message" [ref=e195]:
+          - /placeholder: Tell us about your data challenges...
+      - button "Send Message" [ref=e196] [cursor=pointer]:
+        - text: Send Message
+        - img [ref=e197]
+  - contentinfo [ref=e199]:
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - link "Angler BI Logo AnglerBI" [ref=e203] [cursor=pointer]:
+            - /url: "#hero"
+            - img "Angler BI Logo" [ref=e204]
+            - text: AnglerBI
+          - paragraph [ref=e205]:
+            - text: Business Intelligence Consulting
+            - text: Miami, Florida
+        - generic [ref=e206]:
+          - heading "Navigate" [level=5] [ref=e207]
+          - list [ref=e208]:
+            - listitem [ref=e209]:
+              - link "Services" [ref=e210] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e211]:
+              - link "Work" [ref=e212] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=e213]:
+              - link "About" [ref=e214] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e215]:
+              - link "Contact" [ref=e216] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e217]:
+          - heading "Connect" [level=5] [ref=e218]
+          - link "contact@anglerbi.com" [ref=e219] [cursor=pointer]:
+            - /url: mailto:contact@anglerbi.com
+          - generic [ref=e220]:
+            - link "LinkedIn" [ref=e221] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e222]
+            - link "Twitter" [ref=e224] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e225]
+      - generic [ref=e227]:
+        - paragraph [ref=e228]: © 2026 Angler Business Intelligence, LLC. All Rights Reserved.
+        - generic [ref=e229]:
+          - link "Privacy Policy" [ref=e230] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=e231] [cursor=pointer]:
+            - /url: "#"
