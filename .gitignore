@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────
+#  Angler BI — .gitignore
+#  Only commit what GitHub Pages needs to serve the site and
+#  what engineers need to run the pipeline.
+# ─────────────────────────────────────────────────────────────
+
+
+# ── SECRETS — never commit ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+blog-pipeline/.env
+blog-pipeline/.env.example
+
+
+# ── DEPENDENCIES ──────────────────────────────────────────────
+node_modules/
+blog-pipeline/node_modules/
+
+
+# ── LOCAL TOOLING STATE ───────────────────────────────────────
+# Cowork/Claude Code workspace — local session state, not source code
+.claude/
+
+# Compiled/packaged skill binaries — source of truth is skills/*/SKILL.md
+skills/*.skill
+
+# Skill eval workspaces — dev artifacts, not production assets
+skills/*-workspace/
+
+
+# ── TEST & SCRATCH FILES ──────────────────────────────────────
+# Test asset from site template scaffolding
+assets/img/portfolio/test.png
+
+# Pipeline temp files
+blog-pipeline/.weekly-topic.json
+blog-pipeline/*.log
+
+
+# ── OS & EDITOR ARTIFACTS ─────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# ── PLAYWRIGHT / AUTOMATION ───────────────────────────────────
+.playwright-cli/

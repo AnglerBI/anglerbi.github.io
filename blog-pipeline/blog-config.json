@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "created": "2026-06-03",
+    "instructions": "Run step1-onboarding.js to refresh this profile. Add your API keys to blog-pipeline/.env (copy from .env.example)."
+  },
+  "business": {
+    "name": "Angler BI",
+    "full_name": "Angler Business Intelligence, LLC",
+    "url": "https://anglerbi.com",
+    "tagline": "Cast a wider net on your data insights",
+    "description": "Expert business intelligence consulting — data strategy, Power BI dashboards, and predictive analytics.",
+    "location": "Miami, Florida",
+    "founded_metrics": {
+      "years_experience": "10+",
+      "avg_roi_lift": "25%",
+      "client_retention": "100%",
+      "reporting_time_reduction": "80%",
+      "decision_speed_multiplier": "3x"
+    }
+  },
+  "services": [
+    { "name": "Data Strategy & Roadmap", "keywords": ["data architecture design","governance frameworks","KPI definition","BI tool selection","data roadmap"] },
+    { "name": "Power BI Dashboards", "keywords": ["custom dashboard design","CRM integration","ERP integration","automated data refresh","executive reporting"] },
+    { "name": "Predictive Analytics", "keywords": ["churn prediction","demand forecasting","trend identification","risk analysis","machine learning models"] }
+  ],
+  "icp": {
+    "description": "Mid-to-enterprise businesses that have data but lack the infrastructure or expertise to act on it confidently.",
+    "personas": ["C-suite / VP / Director","Data & Analytics Managers","Operations & Finance Leaders"],
+    "pain_points": [
+      "Manual, time-consuming reporting",
+      "Data silos across CRM, ERP, and other tools",
+      "No clear KPIs or visibility into business health",
+      "Gut-feel decisions due to lack of real-time data",
+      "Failed or stalled BI tool implementations",
+      "Can't translate data into ROI"
+    ],
+    "industries": ["Financial Services","Healthcare","Retail","Manufacturing","Professional Services","SaaS"]
+  },
+  "differentiators": [
+    "Strategy-first, not tool-first",
+    "Miami-based boutique with enterprise-level depth",
+    "100% client retention",
+    "Practicality over buzzwords",
+    "Serves all org levels from executive to analyst"
+  ],
+  "brand_voice": {
+    "tone": "Authoritative but approachable. Confident without being arrogant. Clear over clever.",
+    "personality": "Strategic advisor, not vendor. Fishing/water metaphors welcomed but not forced.",
+    "avoid": ["buzzword-heavy language","vague promises","overly academic writing","aggressive sales language"],
+    "writing_style": "Short sentences. Active voice. Data-backed claims. Actionable takeaways. No fluff."
+  },
+  "integrations_mentioned": ["Power BI","CRM","ERP"],
+  "blog_topics": {
+    "primary": ["Business Intelligence & Analytics","AI in Business Intelligence","Data Strategy","Power BI Tips & Tutorials"],
+    "secondary": ["AI News & Advancements","Data & AI in Business","Analytics Industry News","Predictive Analytics Use Cases"],
+    "content_mix": { "TOFU": 0.40, "MOFU": 0.40, "BOFU": 0.20 }
+  },
+  "seo": {
+    "domain": "anglerbi.com",
+    "target_domain_rating": 20,
+    "kd_ceiling": 30,
+    "volume_floor": 200,
+    "top5_exclusion": true,
+    "seed_keywords": [
+      "business intelligence consulting","power bi dashboard","data strategy","predictive analytics for business",
+      "BI consulting Miami","data visualization consulting","executive dashboard","KPI dashboard design",
+      "churn prediction model","demand forecasting","data governance framework","BI tool selection",
+      "AI in business intelligence","automated reporting","data driven decision making"
+    ]
+  },
+  "competitors": [],
+  "content_pipeline": { "clusters": [], "queue": [], "published": [{"keyword":"power bi copilot features 2026","title":"Power BI Copilot in 2026: Key Features and What They Mean for Your BI Strategy","slug":"power-bi-copilot-features-2026","published":"2026-06-04T00:00:00.000Z","path":"blog/articles/power-bi-copilot-features-2026/","cluster":"Power BI"}] },
+  "_api_keys_note": "API keys are loaded from blog-pipeline/.env — never stored here. See .env.example for setup.",
+  "api_keys_guide": {
+    "required": [
+      { "key": "anthropic_api_key", "purpose": "Powers all Claude calls (Haiku for classification, Sonnet for writing)", "get_it": "https://console.anthropic.com/settings/keys", "cost": "~$0.25–2.00 per article" },
+      { "key": "tavily_api_key", "purpose": "Real-time web research — news, expert opinions, recent developments", "get_it": "https://app.tavily.com", "cost": "Free: 1,000 searches/mo. Paid: $20/mo for 10k" }
+    ],
+    "recommended": [
+      { "key": "dataforseo_login + dataforseo_password", "purpose": "Keyword research, SERP analysis, competitor rankings", "get_it": "https://dataforseo.com", "cost": "~$50/mo pay-per-call" },
+      { "key": "firecrawl_api_key", "purpose": "Scrapes top-ranking competitor articles for structure analysis", "get_it": "https://firecrawl.dev", "cost": "Free: 500 pages/mo" }
+    ],
+    "optional": [
+      { "key": "openai_api_key", "purpose": "DALL-E image generation for article headers", "get_it": "https://platform.openai.com/api-keys", "cost": "~$0.04/image" },
+      { "key": "youtube_data_api_key", "purpose": "Find relevant YouTube videos for transcript insights", "get_it": "https://console.cloud.google.com → Enable YouTube Data API v3", "cost": "Free (10,000 units/day)" }
+    ]
+  }
+}

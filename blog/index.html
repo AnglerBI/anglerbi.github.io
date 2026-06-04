@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Business Intelligence & AI Insights | Angler BI</title>
+  <meta name="description" content="Expert insights on business intelligence, AI advancements, Power BI, data strategy, and predictive analytics from Angler BI's consulting team.">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+        <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="mobile-menu">
+    <ul>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact">Get In Touch</a></li>
+    </ul>
+  </div>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <div class="blog-eyebrow">Insights & Analysis</div>
+      <h1 class="blog-headline">
+        Data intelligence,<br><em>decoded weekly</em>
+      </h1>
+      <p class="blog-subhead">
+        AI advancements, business intelligence strategy, Power BI deep dives, and the data trends shaping how modern companies make decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="blog-filters">
+    <div class="blog-filters-inner">
+      <button class="filter-btn active" data-filter="all">All Posts</button>
+      <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+      <button class="filter-btn" data-filter="bi">Business Intelligence</button>
+      <button class="filter-btn" data-filter="powerbi">Power BI</button>
+      <button class="filter-btn" data-filter="strategy">Data Strategy</button>
+    </div>
+  </section>
+
+  <!-- ARTICLES GRID -->
+  <section class="blog-grid-section">
+    <div class="blog-grid-inner">
+      <div class="blog-grid" id="blogGrid">
+        <!-- ARTICLES_START -->
+    <article class="blog-card">
+      <div class="blog-card-body">
+        <span class="blog-card-category">Power BI</span>
+        <h3 class="blog-card-title"><a href="/blog/articles/power-bi-copilot-features-2026/">Power BI Copilot in 2026: Key Features and What They Mean for Your BI Strategy</a></h3>
+        <p class="blog-card-excerpt">Power BI Copilot's 2026 updates — visual calculations GA, mobile chat, DAX generation, and Q&A deprecation — change how business users interact with data. Here's what BI teams need to know.</p>
+        <time class="blog-card-date">June 4, 2026</time>
+      </div>
+    </article>
+    <!-- ARTICLES_END -->
+
+        <!-- PLACEHOLDER: shown when no articles exist yet -->
+        <div class="blog-empty" id="blogEmpty">
+          <div class="blog-empty-icon">📊</div>
+          <h3>First article dropping Monday</h3>
+          <p>We publish weekly insights on AI, BI, and data strategy. Check back soon — or <a href="/#contact">get in touch</a> to talk data now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="blog-newsletter">
+    <div class="blog-newsletter-inner">
+      <h2>Stay ahead of the data curve</h2>
+      <p>Weekly insights on AI, business intelligence, and data strategy — delivered every Monday morning.</p>
+      <form class="newsletter-form" action="#" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+      <p class="newsletter-fine">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo">
+        <img src="/assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+        <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
+      </a>
+      <p class="footer-tagline">Business Intelligence Consulting · Miami, Florida</p>
+      <ul class="footer-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© Angler Business Intelligence, LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+  <script>
+    // Filter tabs
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.blog-card').forEach(card => {
+          const cat = card.querySelector('.blog-card-category')?.textContent?.toLowerCase() || '';
+          card.style.display = (filter === 'all' || cat.includes(filter)) ? '' : 'none';
+        });
+      });
+    });
+
+    // Hide empty state if articles exist
+    const articles = document.querySelectorAll('.blog-card');
+    if (articles.length > 0) {
+      document.getElementById('blogEmpty').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
