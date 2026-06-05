@@ -33,9 +33,19 @@ skills/*-workspace/
 # Test asset from site template scaffolding
 assets/img/portfolio/test.png
 
+# Dev/test utility scripts — not needed in production
+blog-pipeline/test-*.js
+blog-pipeline/debug-*.js
+blog-pipeline/scratch-*.js
+
 # Pipeline temp files
 blog-pipeline/.weekly-topic.json
 blog-pipeline/*.log
+
+# Article raw markdown and internal publish docs — not served by GitHub Pages
+# Kept locally but no need to ship to the remote
+blog/articles/*/article.md
+blog/articles/*/publish-kit.md
 
 
 # ── OS & EDITOR ARTIFACTS ─────────────────────────────────────

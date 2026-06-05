@@ -70,7 +70,7 @@
     ]
   },
   "competitors": [],
-  "content_pipeline": { "clusters": [], "queue": [], "published": [{"keyword":"agentic business intelligence","title":"Agentic BI Just Went Mainstream. Here's the Failure Mode Nobody's Talking About.","slug":"agentic-bi-semantic-layer-failure-2026","published":"2026-06-05T00:00:00.000Z","path":"blog/articles/agentic-bi-semantic-layer-failure-2026/","cluster":"AI in Business Intelligence"},{"keyword":"power bi copilot features 2026","title":"Power BI Copilot in 2026: Key Features and What They Mean for Your BI Strategy","slug":"power-bi-copilot-features-2026","published":"2026-06-04T00:00:00.000Z","path":"blog/articles/power-bi-copilot-features-2026/","cluster":"Power BI"}] },
+  "content_pipeline": { "clusters": [], "queue": [], "published": [{"keyword":"power bi copilot features 2026","title":"Power BI Copilot in 2026: Key Features and What They Mean for Your BI Strategy","slug":"power-bi-copilot-features-2026","published":"2026-06-04T00:00:00.000Z","path":"blog/articles/power-bi-copilot-features-2026/","cluster":"Power BI"}] },
   "_api_keys_note": "API keys are loaded from blog-pipeline/.env — never stored here. See .env.example for setup.",
   "api_keys_guide": {
     "required": [

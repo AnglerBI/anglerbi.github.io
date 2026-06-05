@@ -380,7 +380,7 @@ Return a JSON array only:
     try {
       console.log(`  🖼️   Generating image ${img.position} via Imagen 3...`);
       const resp = await axios.post(
-        `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${googleKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict?key=${googleKey}`,
         {
           instances: [{ prompt: img.prompt }],
           parameters: {
@@ -455,7 +455,7 @@ function writeHtmlPage(article, outline, topic, images, schema, publishDate) {
     .replace(/\[CTA\]/g, `
 <div class="article-cta">
   <h3>Ready to turn your data into decisions?</h3>
-  <p>Angler BI builds the intelligence infrastructure that makes confident decisions possible — and sustainable.</p>
+  <p>Angler BI builds the intelligence infrastructure that makes confident decisions possible. And sustainable.</p>
   <a href="https://anglerbi.com/#contact" class="cta-btn">Book a Free Discovery Call</a>
 </div>`)
     .split('\n\n')
