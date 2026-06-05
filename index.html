@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angler BI — Business Intelligence Consulting</title>
+    <meta name="description"
+        content="Angler BI delivers expert business intelligence consulting — data strategy, Power BI dashboards, and predictive analytics. Based in Miami, FL.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════ -->
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+                <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+        </ul>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+    <section id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Intelligent Data Solutions</div>
+            <h1 class="hero-headline">
+                Cast a wider<br>
+                net on your <br> <span class="text-accent">data insights</span>
+            </h1>
+            <p class="hero-sub">
+                Angler BI transforms raw data into strategic intelligence. From enterprise dashboards to automated
+                processes, we help businesses make decisions with confidence.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+                <a href="#work" class="btn btn-ghost">How We Work<i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">25%</span>
+                    <span class="stat-label">Avg. ROI Lift</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Client Focused</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Intelligence, <b></b><em>built for action</em></h2>
+                <p class="section-desc">We don't just present data — we engineer the systems and strategies that make it
+                    work for your business.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-route"></i></div>
+                    <h3>Data Strategy & Roadmap</h3>
+                    <p>We align your data initiatives with your core business goals — governance frameworks,
+                        architecture decisions, and a clear path forward.</p>
+                    <ul class="service-list">
+                        <li>Data architecture design</li>
+                        <li>Governance frameworks</li>
+                        <li>KPI definition & alignment</li>
+                        <li>BI tool selection & implementation</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Power BI Dashboards</h3>
+                    <p>Interactive, real-time dashboards that bring your data to life. Drill-downs, KPI tracking, and
+                        automated alerts — built for decision-makers.</p>
+                    <ul class="service-list">
+                        <li>Custom dashboard design</li>
+                        <li>CRM & ERP integration</li>
+                        <li>Automated data refresh</li>
+                        <li>Executive reporting suites</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Machine learning models that forecast demand, identify churn, and surface opportunities before
+                        they're visible to the competition.</p>
+                    <ul class="service-list">
+                        <li>Churn prediction models</li>
+                        <li>Demand forecasting</li>
+                        <li>Trend identification</li>
+                        <li>Risk analysis & mitigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     WORK
+══════════════════════════════════════════════ -->
+    <section id="work" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How We Work</span>
+                <h2 class="section-title">A proven path from <em>data to decisions</em></h2>
+                <p class="section-desc">Every engagement starts with understanding your business — not your data. The
+                    data follows. Here's how we get you there.</p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="process-num">01</div>
+                    <div class="process-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    <h3>Discover</h3>
+                    <p>We immerse ourselves in your business — your goals, your gaps, and the data landscape you're
+                        working with today. No assumptions. No cookie-cutter templates. Just deep listening and sharper
+                        questions.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">02</div>
+                    <div class="process-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>Architect</h3>
+                    <p>We design the right infrastructure for your scale — data models, pipeline designs, and tool
+                        selections that fit your organization's reality, not just industry best practices on paper.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">03</div>
+                    <div class="process-icon"><i class="fas fa-hammer"></i></div>
+                    <h3>Build & Deploy</h3>
+                    <p>From interactive dashboards to predictive models, we build and deploy solutions that integrate
+                        seamlessly into your existing workflows — with adoption in mind from day one.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">04</div>
+                    <div class="process-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                    <h3>Optimize & Scale</h3>
+                    <p>Data needs evolve as businesses grow. We stay close — monitoring performance, refining models,
+                        and ensuring your intelligence infrastructure scales confidently alongside you.</p>
+                </div>
+            </div>
+
+            <!-- Impact Metrics -->
+            <div class="work-impact reveal">
+                <div class="impact-stat">
+                    <span class="impact-num">80%</span>
+                    <span class="impact-label">Reduction in manual reporting time</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">3×</span>
+                    <span class="impact-label">Faster decision-making cycles</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">25%</span>
+                    <span class="impact-label">Average ROI improvement</span>
+                </div>
+                <div class="impact-divider"></div>
+                <div class="impact-stat">
+                    <span class="impact-num">100%</span>
+                    <span class="impact-label">Client retention rate</span>
+                </div>
+            </div>
+
+            <!-- Outcome Pillars -->
+            <div class="outcomes-grid">
+                <div class="outcome-card reveal">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Clarity at every level</h4>
+                    <p>Executives get the strategic picture. Managers get operational depth. Analysts get the
+                        granularity they need. We build intelligence that speaks to every layer of your organization.
+                    </p>
+                </div>
+                <div class="outcome-card reveal">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Decisions that move fast</h4>
+                    <p>We eliminate the bottleneck between data collection and confident action. Real-time visibility
+                        means your team stops waiting for the weekly report and starts leading with insight.</p>
+                </div>
+                <div class="outcome-card reveal">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h4>Infrastructure built to scale</h4>
+                    <p>We don't build for today's headcount or yesterday's tools. Every architecture decision
+                        anticipates your next stage of growth. The foundation you invest in now carries you through
+                        whatever comes next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-tag">About Angler BI</span>
+                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Data clarity for <em>every
+                            decision</em></h2>
+                    <p class="about-lead">At Angler BI, we believe great decisions are made from clear data. We partner
+                        with businesses to build the intelligence infrastructure that makes that clarity possible and
+                        sustainable.</p>
+                    <p class="about-body">We combine deep technical expertise in BI tooling with a practical
+                        understanding of business strategy, ensuring every solution we build isn't just technically
+                        sound, but immediately useful to the people who rely on it.</p>
+                    <div class="values-grid">
+                        <div class="value">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Constantly improving our methods to stay at the cutting edge of BI technology.</p>
+                        </div>
+                        <div class="value">
+                            <i class="fas fa-shield-halved"></i>
+                            <h4>Integrity</h4>
+                            <p>Your data is treated with the utmost respect, security, and confidentiality.</p>
+                        </div>
+                        <div class="value">
+                            <i class="fas fa-eye"></i>
+                            <h4>Insight</h4>
+                            <p>We transform complexity into clarity. We curate insights that are actionable, not
+                                academic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-aside reveal">
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h5>Headquartered in</h5>
+                            <p>Miami, Florida</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-scale-balanced"></i></div>
+                        <div>
+                            <h5>Our Philosophy</h5>
+                            <p>The right tool for the job, not just the latest buzzword</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h5>Our Approach</h5>
+                            <p>Transparent, long-term partnerships</p>
+                        </div>
+                    </div>
+                    <blockquote class="about-quote">
+                        "We don't just deliver reports. We build the infrastructure for a data-driven culture."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Let's talk <em>data</em></h2>
+                    <p>Ready to harness your data? Tell us about your business and we'll set up a complimentary
+                        discovery call to explore what's possible.</p>
+                    <div class="contact-details">
+                        <a href="mailto:contact@anglerbi.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@anglerbi.com</span>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Miami, Florida</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal">
+                    <form action="https://formsubmit.co/contact@anglerbi.com" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="New Angler BI Inquiry">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us about your data challenges..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <img src="assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
+                        <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
+                    </a>
+                    <p>Business Intelligence Consulting<br>Miami, Florida</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h5>Connect</h5>
+                    <a href="mailto:contact@anglerbi.com">contact@anglerbi.com</a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Angler Business Intelligence, LLC. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

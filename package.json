@@ -1,0 +1,12 @@
+{
+  "name": "anglerbi-website",
+  "version": "1.0.0",
+  "description": "Angler BI marketing website",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "blog": "cd blog-pipeline && npm run weekly"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
