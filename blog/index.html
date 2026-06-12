@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Business Intelligence & AI Insights | Angler BI</title>
-  <meta name="description" content="Expert insights on business intelligence, AI advancements, Power BI, data strategy, and predictive analytics from Angler BI's consulting team.">
+  <meta name="description" content="Straight talk on business intelligence, AI readiness, Power BI, and data strategy from Angler BI. New posts weekly, sorted newest first.">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/blog.css">
 </head>
@@ -24,10 +22,10 @@
       </a>
       <ul class="nav-links">
         <li><a href="/#services">Services</a></li>
-        <li><a href="/#work">Work</a></li>
-        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#work">Approach</a></li>
         <li><a href="/#about">About</a></li>
-        <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta">Book a call</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -38,34 +36,29 @@
   <div id="mobileMenu" class="mobile-menu">
     <ul>
       <li><a href="/#services">Services</a></li>
-      <li><a href="/#work">Work</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#work">Approach</a></li>
       <li><a href="/#about">About</a></li>
-      <li><a href="/#contact">Get In Touch</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Book a call</a></li>
     </ul>
   </div>
 
   <!-- BLOG HERO -->
   <section class="blog-hero">
     <div class="blog-hero-inner">
-      <div class="blog-eyebrow">Insights & Analysis</div>
       <h1 class="blog-headline">
-        Data intelligence,<br><em>decoded weekly</em>
+        Signal, <em>not noise.</em>
       </h1>
       <p class="blog-subhead">
-        AI advancements, business intelligence strategy, Power BI deep dives, and the data trends shaping how modern companies make decisions.
+        Straight talk on business intelligence, AI readiness, Power BI, and data strategy. New posts weekly, sorted newest first. No filler, no guru speak.
       </p>
     </div>
   </section>
 
-  <!-- FILTER TABS -->
+  <!-- FILTER TABS (built from the categories actually present) -->
   <section class="blog-filters">
-    <div class="blog-filters-inner">
+    <div class="blog-filters-inner" id="blogFilters">
       <button class="filter-btn active" data-filter="all">All Posts</button>
-      <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
-      <button class="filter-btn" data-filter="bi">Business Intelligence</button>
-      <button class="filter-btn" data-filter="powerbi">Power BI</button>
-      <button class="filter-btn" data-filter="strategy">Data Strategy</button>
     </div>
   </section>
 
@@ -114,9 +107,9 @@
 
         <!-- PLACEHOLDER: shown when no articles exist yet -->
         <div class="blog-empty" id="blogEmpty">
-          <div class="blog-empty-icon">📊</div>
+          <div class="blog-empty-icon">◌</div>
           <h3>First article dropping Monday</h3>
-          <p>We publish weekly insights on AI, BI, and data strategy. Check back soon — or <a href="/#contact">get in touch</a> to talk data now.</p>
+          <p>We publish weekly insights on AI, BI, and data strategy. Check back soon, or <a href="/#contact">get in touch</a> to talk data now.</p>
         </div>
       </div>
     </div>
@@ -126,7 +119,7 @@
   <section class="blog-newsletter">
     <div class="blog-newsletter-inner">
       <h2>Stay ahead of the data curve</h2>
-      <p>Weekly insights on AI, business intelligence, and data strategy — delivered every Monday morning.</p>
+      <p>Weekly insights on AI, business intelligence, and data strategy. Delivered every Monday morning, written by a human who builds this stuff.</p>
       <form class="newsletter-form" action="#" method="POST">
         <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
         <button type="submit" class="newsletter-btn">Subscribe</button>
@@ -142,10 +135,10 @@
         <img src="/assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
         <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
       </a>
-      <p class="footer-tagline">Business Intelligence Consulting · Miami, Florida</p>
+      <p class="footer-tagline">Casting a wider net on your data insights · Miami, Florida</p>
       <ul class="footer-links">
         <li><a href="/#services">Services</a></li>
-        <li><a href="/#work">Work</a></li>
+        <li><a href="/#work">Approach</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul>
@@ -155,24 +148,55 @@
 
   <script src="/js/scripts.js"></script>
   <script>
-    // Filter tabs
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    (() => {
+      const grid = document.getElementById('blogGrid');
+      const cards = Array.from(grid.querySelectorAll('.blog-card'));
+      const empty = document.getElementById('blogEmpty');
+
+      // Sort newest first by the <time> text, regardless of pipeline insert order
+      const cardDate = card => {
+        const t = Date.parse(card.querySelector('.blog-card-date')?.textContent || '');
+        return Number.isNaN(t) ? 0 : t;
+      };
+      cards.sort((a, b) => cardDate(b) - cardDate(a));
+      cards.forEach((card, i) => {
+        card.style.setProperty('--i', i);
+        card.classList.toggle('featured', i === 0);
+        grid.insertBefore(card, empty);
+      });
+
+      if (cards.length > 0) empty.style.display = 'none';
+
+      // Build filter buttons from the categories actually on the page
+      const filters = document.getElementById('blogFilters');
+      const categories = [...new Set(
+        cards.map(c => c.querySelector('.blog-card-category')?.textContent.trim()).filter(Boolean)
+      )];
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.dataset.filter = cat.toLowerCase();
+        btn.textContent = cat;
+        filters.appendChild(btn);
+      });
+
+      filters.addEventListener('click', e => {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const filter = btn.dataset.filter;
-        document.querySelectorAll('.blog-card').forEach(card => {
-          const cat = card.querySelector('.blog-card-category')?.textContent?.toLowerCase() || '';
-          card.style.display = (filter === 'all' || cat.includes(filter)) ? '' : 'none';
+        let firstVisible = true;
+        cards.forEach(card => {
+          const cat = card.querySelector('.blog-card-category')?.textContent.trim().toLowerCase() || '';
+          const show = filter === 'all' || cat === filter;
+          card.style.display = show ? '' : 'none';
+          // keep the featured treatment on the first visible card
+          card.classList.toggle('featured', show && firstVisible);
+          if (show) firstVisible = false;
         });
       });
-    });
-
-    // Hide empty state if articles exist
-    const articles = document.querySelectorAll('.blog-card');
-    if (articles.length > 0) {
-      document.getElementById('blogEmpty').style.display = 'none';
-    }
+    })();
   </script>
 </body>
 </html>

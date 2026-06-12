@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angler BI — Business Intelligence Consulting</title>
+    <title>Angler BI — Data & Business Intelligence Consulting</title>
     <meta name="description"
-        content="Angler BI delivers expert business intelligence consulting — data strategy, Power BI dashboards, and predictive analytics. Based in Miami, FL.">
+        content="Angler BI turns messy, scattered data into decisions you can trust. Data strategy, workflow automation, and AI-ready foundations for growing businesses. Miami, FL.">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -29,10 +26,10 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#work">Approach</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
-                <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+                <li><a href="#contact" class="nav-cta">Book a call</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -43,10 +40,10 @@
     <div id="mobileMenu" class="mobile-menu">
         <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#work">Work</a></li>
+            <li><a href="#work">Approach</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="/blog/">Blog</a></li>
-            <li><a href="#contact">Get In Touch</a></li>
+            <li><a href="#contact">Book a call</a></li>
         </ul>
     </div>
 
@@ -54,41 +51,87 @@
      HERO
 ══════════════════════════════════════════════ -->
     <section id="hero">
-        <canvas id="heroCanvas"></canvas>
-        <div class="hero-content">
-            <div class="hero-eyebrow">Intelligent Data Solutions</div>
-            <h1 class="hero-headline">
-                Cast a wider<br>
-                net on your <br> <span class="text-accent">data insights</span>
-            </h1>
-            <p class="hero-sub">
-                Angler BI transforms raw data into strategic intelligence. From enterprise dashboards to automated
-                processes, we help businesses make decisions with confidence.
-            </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-                <a href="#work" class="btn btn-ghost">How We Work<i class="fas fa-arrow-right"></i></a>
+        <div class="hero-inner container">
+            <div class="hero-copy">
+                <h1 class="hero-headline">
+                    Casting a wider net on your <span class="grad">data insights</span>
+                </h1>
+                <p class="hero-sub">
+                    Angler BI turns messy, scattered data into decisions you can trust. Clean foundations,
+                    automated workflows, and dashboards your team actually uses. No jargon, no shelf-ware,
+                    no pretending AI fixes a broken foundation.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        Book a discovery call
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 8h12M9 3l5 5-5 5" />
+                        </svg>
+                    </a>
+                    <a href="#work" class="btn btn-ghost">
+                        How we work
+                    </a>
+                </div>
+                <p class="hero-tagline"><b>Turning insights</b> into action</p>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-num">10+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num">25%</span>
-                    <span class="stat-label">Avg. ROI Lift</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Client Focused</span>
-                </div>
+
+            <!-- Hero animation: data flow (Lottie, brand palette) -->
+            <div class="hero-viz" aria-hidden="true">
+                <div id="heroLottie"></div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+
+        <!-- ticker -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack">
+                <span>Messy data <b>→</b> Confident decisions</span>
+                <span>Spreadsheet chaos <b>→</b> One source of truth</span>
+                <span>Manual reporting <b>→</b> Automated workflows</span>
+                <span>Dashboard dust <b>→</b> Daily adoption</span>
+                <span>AI hype <b>→</b> AI-ready foundations</span>
+                <span>Gut feeling <b>→</b> Real visibility</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+     PROOF / STATS
+══════════════════════════════════════════════ -->
+    <section id="proof" class="section">
+        <div class="container">
+            <div class="section-head centered reveal">
+                <h2 class="section-title">The problem isn't your data.<br>It's that <em>nobody can use it.</em></h2>
+                <p class="section-desc">These aren't our marketing numbers. This is what independent research says about
+                    how most companies handle data right now.</p>
+            </div>
+            <div class="proof-grid">
+                <div class="proof-cell reveal">
+                    <span class="proof-num"><span data-count="55" data-suffix="%">0%</span></span>
+                    <span class="proof-text">of enterprise data is "dark": stored and paid for, but never analyzed or
+                        used in a single decision.</span>
+                    <span class="proof-src">Splunk</span>
+                </div>
+                <div class="proof-cell reveal" style="--d:.08s">
+                    <span class="proof-num"><span data-count="12.9" data-decimals="1" data-prefix="$"
+                            data-suffix="M">$0M</span></span>
+                    <span class="proof-text">the average annual cost of poor data quality per organization.</span>
+                    <span class="proof-src">Gartner</span>
+                </div>
+                <div class="proof-cell reveal" style="--d:.16s">
+                    <span class="proof-num"><span data-count="80" data-suffix="%">0%</span></span>
+                    <span class="proof-text">of analyst time goes to finding and prepping data instead of actually
+                        analyzing it.</span>
+                    <span class="proof-src">IBM</span>
+                </div>
+                <div class="proof-cell reveal" style="--d:.24s">
+                    <span class="proof-num"><span data-count="60" data-suffix="%">0%</span></span>
+                    <span class="proof-text">of AI projects will be abandoned through 2026 because the data underneath
+                        them isn't ready.</span>
+                    <span class="proof-src">Gartner, 2025</span>
+                </div>
+            </div>
+            <p class="proof-note reveal">Independent industry research. We show receipts, not vibes.</p>
         </div>
     </section>
 
@@ -97,47 +140,66 @@
 ══════════════════════════════════════════════ -->
     <section id="services" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2 class="section-title">Intelligence, <b></b><em>built for action</em></h2>
-                <p class="section-desc">We don't just present data — we engineer the systems and strategies that make it
-                    work for your business.</p>
+            <div class="section-head reveal">
+                <h2 class="section-title">Three ways we <em>earn our keep</em></h2>
+                <p class="section-desc">Every engagement is scoped to what you actually need. Not what looks impressive
+                    in a proposal.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-route"></i></div>
-                    <h3>Data Strategy & Roadmap</h3>
-                    <p>We align your data initiatives with your core business goals — governance frameworks,
-                        architecture decisions, and a clear path forward.</p>
+                    <span class="service-num">/ 01</span>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 20h18" />
+                            <path d="M6 17v-6M11 17V5M16 17v-9M21 17V9" />
+                        </svg>
+                    </div>
+                    <h3>Data &amp; BI Consulting</h3>
+                    <p>Messy data into confident decisions. We build clean data foundations and dashboards that change
+                        how you run the business, not ones that collect dust.</p>
                     <ul class="service-list">
-                        <li>Data architecture design</li>
-                        <li>Governance frameworks</li>
-                        <li>KPI definition & alignment</li>
-                        <li>BI tool selection & implementation</li>
+                        <li>Data strategy &amp; architecture</li>
+                        <li>KPI definition that matches your goals</li>
+                        <li>Dashboards &amp; reporting people open daily</li>
+                        <li>Tool selection without the vendor pitch</li>
                     </ul>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Power BI Dashboards</h3>
-                    <p>Interactive, real-time dashboards that bring your data to life. Drill-downs, KPI tracking, and
-                        automated alerts — built for decision-makers.</p>
+                <div class="service-card reveal" style="--d:.1s">
+                    <span class="service-num">/ 02</span>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+                        </svg>
+                    </div>
+                    <h3>Workflow Automation &amp; Process Optimization</h3>
+                    <p>Stop doing manually what software does better. We find where your team is losing hours every
+                        week and build the systems that give them back.</p>
                     <ul class="service-list">
-                        <li>Custom dashboard design</li>
-                        <li>CRM & ERP integration</li>
-                        <li>Automated data refresh</li>
-                        <li>Executive reporting suites</li>
+                        <li>Process audits that find the bottlenecks</li>
+                        <li>Reports that build themselves overnight</li>
+                        <li>System integrations that end copy-paste</li>
+                        <li>Hours back, every single week</li>
                     </ul>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Predictive Analytics</h3>
-                    <p>Machine learning models that forecast demand, identify churn, and surface opportunities before
-                        they're visible to the competition.</p>
+                <div class="service-card reveal" style="--d:.2s">
+                    <span class="service-num">/ 03</span>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l2.2 6.3L20.5 11l-6.3 2.2L12 19.5l-2.2-6.3L3.5 11l6.3-1.7L12 3Z" />
+                            <path d="M19 16l.9 2.6L22.5 19l-2.6.9L19 22.5l-.9-2.6L15.5 19l2.6-.9L19 16Z" />
+                        </svg>
+                    </div>
+                    <h3>AI Readiness &amp; Strategy</h3>
+                    <p>You can't AI your way out of a messy data strategy. We fix the foundation first, so when you
+                        bring AI into the business it actually works.</p>
                     <ul class="service-list">
-                        <li>Churn prediction models</li>
-                        <li>Demand forecasting</li>
-                        <li>Trend identification</li>
-                        <li>Risk analysis & mitigation</li>
+                        <li>AI readiness assessment</li>
+                        <li>Data gap analysis, no sugarcoating</li>
+                        <li>A roadmap with real priorities</li>
+                        <li>Groundwork before the buzzwords</li>
                     </ul>
                 </div>
             </div>
@@ -145,94 +207,79 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-     WORK
+     APPROACH
 ══════════════════════════════════════════════ -->
-    <section id="work" class="section section-dark">
+    <section id="work" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">How We Work</span>
-                <h2 class="section-title">A proven path from <em>data to decisions</em></h2>
-                <p class="section-desc">Every engagement starts with understanding your business — not your data. The
-                    data follows. Here's how we get you there.</p>
+            <div class="section-head reveal">
+                <h2 class="section-title">We start with your business, <em>not your data</em></h2>
+                <p class="section-desc">The data follows. Most consultants skip the first step and wonder why nothing
+                    gets adopted.</p>
             </div>
-
-            <!-- Process Steps -->
-            <div class="process-grid">
-                <div class="process-step reveal">
-                    <div class="process-num">01</div>
-                    <div class="process-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <div class="process-grid reveal">
+                <div class="process-step">
+                    <span class="process-num">01</span>
                     <h3>Discover</h3>
-                    <p>We immerse ourselves in your business — your goals, your gaps, and the data landscape you're
-                        working with today. No assumptions. No cookie-cutter templates. Just deep listening and sharper
-                        questions.</p>
+                    <p>We learn your business before we touch your data. Goals, gaps, and what's actually slowing you
+                        down. No cookie-cutter templates, just sharper questions.</p>
                 </div>
-                <div class="process-step reveal">
-                    <div class="process-num">02</div>
-                    <div class="process-icon"><i class="fas fa-sitemap"></i></div>
+                <div class="process-step">
+                    <span class="process-num">02</span>
                     <h3>Architect</h3>
-                    <p>We design the right infrastructure for your scale — data models, pipeline designs, and tool
-                        selections that fit your organization's reality, not just industry best practices on paper.</p>
+                    <p>We design for your scale and your budget. Data models, pipelines, and tools that fit your
+                        reality, not a Fortune 500 fantasy.</p>
                 </div>
-                <div class="process-step reveal">
-                    <div class="process-num">03</div>
-                    <div class="process-icon"><i class="fas fa-hammer"></i></div>
-                    <h3>Build & Deploy</h3>
-                    <p>From interactive dashboards to predictive models, we build and deploy solutions that integrate
-                        seamlessly into your existing workflows — with adoption in mind from day one.</p>
+                <div class="process-step">
+                    <span class="process-num">03</span>
+                    <h3>Build &amp; Deploy</h3>
+                    <p>Dashboards, automations, and models built to be used, with adoption planned from day one.
+                        Shelf-ware doesn't count as delivery.</p>
                 </div>
-                <div class="process-step reveal">
-                    <div class="process-num">04</div>
-                    <div class="process-icon"><i class="fas fa-arrow-trend-up"></i></div>
-                    <h3>Optimize & Scale</h3>
-                    <p>Data needs evolve as businesses grow. We stay close — monitoring performance, refining models,
-                        and ensuring your intelligence infrastructure scales confidently alongside you.</p>
+                <div class="process-step">
+                    <span class="process-num">04</span>
+                    <h3>Optimize &amp; Scale</h3>
+                    <p>We stick around. Monitoring, refining, and scaling as you grow. We don't disappear when the
+                        engagement ends.</p>
                 </div>
             </div>
 
-            <!-- Impact Metrics -->
-            <div class="work-impact reveal">
-                <div class="impact-stat">
-                    <span class="impact-num">80%</span>
-                    <span class="impact-label">Reduction in manual reporting time</span>
-                </div>
-                <div class="impact-divider"></div>
-                <div class="impact-stat">
-                    <span class="impact-num">3×</span>
-                    <span class="impact-label">Faster decision-making cycles</span>
-                </div>
-                <div class="impact-divider"></div>
-                <div class="impact-stat">
-                    <span class="impact-num">25%</span>
-                    <span class="impact-label">Average ROI improvement</span>
-                </div>
-                <div class="impact-divider"></div>
-                <div class="impact-stat">
-                    <span class="impact-num">100%</span>
-                    <span class="impact-label">Client retention rate</span>
-                </div>
+            <div class="work-highlight reveal">
+                <p>Data-driven companies are <b>23×</b> more likely to acquire customers and <b>19×</b> more likely to
+                    be profitable.</p>
+                <cite>McKinsey Global Institute</cite>
             </div>
+        </div>
+    </section>
 
-            <!-- Outcome Pillars -->
-            <div class="outcomes-grid">
-                <div class="outcome-card reveal">
-                    <i class="fas fa-layer-group"></i>
-                    <h4>Clarity at every level</h4>
-                    <p>Executives get the strategic picture. Managers get operational depth. Analysts get the
-                        granularity they need. We build intelligence that speaks to every layer of your organization.
-                    </p>
+    <!-- ══════════════════════════════════════════════
+     REALITY (before / after)
+══════════════════════════════════════════════ -->
+    <section id="reality" class="section">
+        <div class="container">
+            <div class="section-head centered reveal">
+                <h2 class="section-title">Every client starts on the left.<br>The work is getting you <em>to the
+                        right.</em></h2>
+            </div>
+            <div class="reality-grid">
+                <div class="reality-col before reveal">
+                    <span class="reality-label">Right now</span>
+                    <ul>
+                        <li>Drowning in spreadsheets and exports, can't find the answer you need</li>
+                        <li>Gut calls, because the numbers can't be trusted</li>
+                        <li>Hours burned every week on manual copy-paste reporting</li>
+                        <li>Tools that promised insights and now collect dust</li>
+                        <li>"We should use AI" with no foundation underneath it</li>
+                    </ul>
                 </div>
-                <div class="outcome-card reveal">
-                    <i class="fas fa-bolt"></i>
-                    <h4>Decisions that move fast</h4>
-                    <p>We eliminate the bottleneck between data collection and confident action. Real-time visibility
-                        means your team stops waiting for the weekly report and starts leading with insight.</p>
-                </div>
-                <div class="outcome-card reveal">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                    <h4>Infrastructure built to scale</h4>
-                    <p>We don't build for today's headcount or yesterday's tools. Every architecture decision
-                        anticipates your next stage of growth. The foundation you invest in now carries you through
-                        whatever comes next.</p>
+                <div class="reality-col after reveal" style="--d:.12s">
+                    <span class="reality-label">After the work</span>
+                    <ul>
+                        <li>One source of truth you actually trust</li>
+                        <li>Decisions backed by numbers, made faster</li>
+                        <li>Reports that build themselves overnight</li>
+                        <li>Dashboards your team opens without being told to</li>
+                        <li>A foundation that's ready the day you are ready for AI</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -245,59 +292,67 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <span class="section-tag">About Angler BI</span>
-                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Data clarity for <em>every
-                            decision</em></h2>
-                    <p class="about-lead">At Angler BI, we believe great decisions are made from clear data. We partner
-                        with businesses to build the intelligence infrastructure that makes that clarity possible and
-                        sustainable.</p>
-                    <p class="about-body">We combine deep technical expertise in BI tooling with a practical
-                        understanding of business strategy, ensuring every solution we build isn't just technically
-                        sound, but immediately useful to the people who rely on it.</p>
-                    <div class="values-grid">
-                        <div class="value">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>Innovation</h4>
-                            <p>Constantly improving our methods to stay at the cutting edge of BI technology.</p>
-                        </div>
-                        <div class="value">
-                            <i class="fas fa-shield-halved"></i>
-                            <h4>Integrity</h4>
-                            <p>Your data is treated with the utmost respect, security, and confidentiality.</p>
-                        </div>
-                        <div class="value">
-                            <i class="fas fa-eye"></i>
-                            <h4>Insight</h4>
-                            <p>We transform complexity into clarity. We curate insights that are actionable, not
-                                academic.</p>
-                        </div>
-                    </div>
+                    <h2 class="section-title">No jargon. No fluff.<br><em>Honest answers.</em></h2>
+                    <p class="about-lead">Good data doesn't speak for itself. Someone has to organize it, connect it,
+                        and make it actionable. That's the job.</p>
+                    <p class="about-body">We work with businesses that know their data matters but haven't found the
+                        right partner to act on it. Some are building their reporting foundation from scratch. Others
+                        have tools in place but no strategy to make them work together. We ask the questions most
+                        consultants skip, and we tell you when something won't work before you spend money on it.</p>
+                    <ul class="about-principles">
+                        <li>Transformation over information. Dashboards mean nothing if they don't change decisions.
+                        </li>
+                        <li>Honest feedback over billable hours.</li>
+                        <li>Build what you actually need, not what looks impressive.</li>
+                        <li>Short-term, measurable outcomes over vague roadmaps.</li>
+                        <li>We show up after the invoice clears. Relationships outlast engagements.</li>
+                    </ul>
                 </div>
-                <div class="about-aside reveal">
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h5>Headquartered in</h5>
-                            <p>Miami, Florida</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-scale-balanced"></i></div>
-                        <div>
-                            <h5>Our Philosophy</h5>
-                            <p>The right tool for the job, not just the latest buzzword</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
-                        <div>
-                            <h5>Our Approach</h5>
-                            <p>Transparent, long-term partnerships</p>
-                        </div>
-                    </div>
+                <div class="about-aside reveal" style="--d:.12s">
                     <blockquote class="about-quote">
-                        "We don't just deliver reports. We build the infrastructure for a data-driven culture."
+                        You can't AI your way out of a <em>messy data strategy.</em>
                     </blockquote>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z" />
+                                    <circle cx="12" cy="10" r="2.6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Based in</h5>
+                                <p>Miami, Florida</p>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20" />
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Pricing</h5>
+                                <p>Priced for what you need, not what fits a template</p>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 12l3 3 5-6" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Engagements</h5>
+                                <p>Projects, ongoing consulting, or monthly retainers</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,30 +361,42 @@
     <!-- ══════════════════════════════════════════════
      CONTACT
 ══════════════════════════════════════════════ -->
-    <section id="contact" class="section section-dark">
+    <section id="contact" class="section">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info reveal">
-                    <span class="section-tag">Contact</span>
-                    <h2 class="section-title" style="text-align:left; margin-top:1rem;">Let's talk <em>data</em></h2>
-                    <p>Ready to harness your data? Tell us about your business and we'll set up a complimentary
-                        discovery call to explore what's possible.</p>
+                    <h2 class="section-title">Tell us <em>what's broken</em></h2>
+                    <p>Book a free discovery call. If we can help, we'll show you exactly how. If we can't, we'll tell
+                        you that too. Either way, you leave with a straighter answer than you came in with.</p>
                     <div class="contact-details">
                         <a href="mailto:contact@anglerbi.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
                             <span>contact@anglerbi.com</span>
                         </a>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z" />
+                                <circle cx="12" cy="10" r="2.6" />
+                            </svg>
                             <span>Miami, Florida</span>
                         </div>
                     </div>
                     <div class="contact-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/anglerbi" aria-label="LinkedIn" rel="noopener"
+                            target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form-wrap reveal">
+                <div class="contact-form-wrap reveal" style="--d:.12s">
                     <form action="https://formsubmit.co/contact@anglerbi.com" method="POST" class="contact-form">
                         <input type="hidden" name="_subject" value="New Angler BI Inquiry">
                         <input type="hidden" name="_captcha" value="false">
@@ -349,12 +416,16 @@
                             <input type="text" id="company" name="company" placeholder="Your company name">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="message">What's going on with your data?</label>
                             <textarea id="message" name="message" rows="5"
-                                placeholder="Tell us about your data challenges..." required></textarea>
+                                placeholder="The mess, the goal, or both. Plain English is fine." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
-                            Send Message <i class="fas fa-arrow-right"></i>
+                            Send it
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 8h12M9 3l5 5-5 5" />
+                            </svg>
                         </button>
                     </form>
                 </div>
@@ -373,14 +444,15 @@
                         <img src="assets/AnglerLogo.svg" alt="Angler BI Logo" class="nav-logo-img">
                         <span class="logo-mark">Angler</span><span class="logo-accent">BI</span>
                     </a>
-                    <p>Business Intelligence Consulting<br>Miami, Florida</p>
+                    <p>Casting a wider net on your data insights.<br>Data &amp; BI consulting, Miami, Florida.</p>
                 </div>
                 <div class="footer-links">
                     <h5>Navigate</h5>
                     <ul>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#work">Work</a></li>
+                        <li><a href="#work">Approach</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -388,8 +460,13 @@
                     <h5>Connect</h5>
                     <a href="mailto:contact@anglerbi.com">contact@anglerbi.com</a>
                     <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/anglerbi" aria-label="LinkedIn" rel="noopener"
+                            target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -403,6 +480,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
