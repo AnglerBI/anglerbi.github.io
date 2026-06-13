@@ -89,10 +89,48 @@ document.addEventListener('DOMContentLoaded', () => {
         counters.forEach(el => countObserver.observe(el));
     }
 
-    // ── Marquee: duplicate track content for a seamless loop ──
-    const marqueeTrack = document.getElementById('marqueeTrack');
-    if (marqueeTrack) {
-        marqueeTrack.innerHTML += marqueeTrack.innerHTML;
+    // ── Transformation band: synced odometers (problem → outcome) ──
+    const tFrom = document.querySelector('.transform-from .transform-list');
+    const tTo = document.querySelector('.transform-to .transform-list');
+    if (tFrom && tTo && !tFrom.dataset.init) {
+        tFrom.dataset.init = tTo.dataset.init = '1';
+        const lists = [tFrom, tTo];
+
+        if (reducedMotion) {
+            // static: hide the animated packet + wire, leave the first pair showing
+            document.querySelectorAll('.transform-packet, .transform-wire')
+                .forEach(el => { el.style.display = 'none'; });
+        } else if (tFrom.children.length > 1) {
+            const real = tFrom.children.length; // real rows, counted before cloning
+            // duplicate the first row of each list so the wrap is seamless
+            lists.forEach(list => list.appendChild(list.children[0].cloneNode(true)));
+
+            const STEP = 1.55;  // em per row — must match CSS li height
+            const SLIDE = 700;  // ms — must match CSS transition duration
+            let i = 0;
+
+            const advance = () => {
+                i++;
+                lists.forEach(list => {
+                    list.style.transition = '';
+                    list.style.transform = `translateY(-${i * STEP}em)`;
+                });
+                if (i >= real) {
+                    // landed on the cloned first row: snap back invisibly
+                    setTimeout(() => {
+                        lists.forEach(list => {
+                            list.style.transition = 'none';
+                            list.style.transform = 'translateY(0)';
+                        });
+                        void tFrom.offsetHeight; // force reflow
+                        lists.forEach(list => { list.style.transition = ''; });
+                        i = 0;
+                    }, SLIDE + 40);
+                }
+            };
+
+            setInterval(advance, 3000);
+        }
     }
 
     // ── Hero Lottie animation ────────────────────────
