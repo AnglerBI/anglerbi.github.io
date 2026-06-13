@@ -18,6 +18,9 @@ blog-pipeline/
 # Automation skills — local only
 skills/
 
+# Local site info — not part of GitHub Pages deploy
+anglerbi-info/
+
 # Editor/IDE workspace state
 .claude/
 .vscode/
