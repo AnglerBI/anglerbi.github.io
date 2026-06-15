@@ -45,6 +45,11 @@ html {
     --amber-tint: #fff3dd;
     --coral: #e8604c;
     --grad: linear-gradient(92deg, #07c3e8 10%, #04768d 90%);
+    /* hero animated gradient palette (vivid, cool, brand) */
+    --gradient-color-1: #c9f1fb;
+    --gradient-color-2: #07c3e8;
+    --gradient-color-3: #0a86b0;
+    --gradient-color-4: #06729a;
     --font-sans: 'Geist', sans-serif;
     --font-mono: 'Geist Mono', monospace;
     --nav-h: 68px;
@@ -438,14 +443,16 @@ ul {
     padding-top: calc(var(--nav-h) + clamp(48px, 7vw, 84px));
     padding-bottom: clamp(36px, 5vw, 60px);
     position: relative;
+    overflow: hidden;
     background: var(--paper);
 }
 
 .hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    position: relative;
+    z-index: 2;
+    min-height: clamp(380px, 46vh, 520px);
+    display: flex;
     align-items: center;
-    gap: clamp(40px, 5vw, 64px);
 }
 
 .hero-copy {
@@ -552,38 +559,35 @@ ul {
     }
 }
 
-/* ─── HERO VIZ (isometric blueprint diagram) ───────── */
-.hero-viz {
-    position: relative;
-    border: 1px dashed var(--dash);
-    border-radius: 4px;
-    background:
-        linear-gradient(rgba(7, 195, 232, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(7, 195, 232, 0.045) 1px, transparent 1px),
-        var(--white);
-    background-size: 28px 28px, 28px 28px, auto;
-    animation: heroFade 1.2s 0.25s var(--ease) both;
-}
-
-/* corner ticks, technical-drawing style */
-.hero-viz::before,
-.hero-viz::after {
-    content: '+';
+/* ─── HERO GRADIENT (animated WebGL mesh, Stripe-style) ─ */
+/* Absolute layer pinned to the top-right of the hero. It bleeds past
+   the top edge (so it flows behind the frosted nav) and the right edge,
+   then feathers down-left along a diagonal into the paper. */
+.hero-gradient-wrap {
     position: absolute;
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: var(--dash);
-    line-height: 1;
+    top: 0;
+    right: 0;
+    width: clamp(600px, 78vw, 1380px);
+    height: clamp(560px, 96vh, 940px);
+    z-index: 0;
+    pointer-events: none;
+    animation: heroFade 1.4s 0.1s var(--ease) both;
+    /* diagonal feather: solid upper-right, dissolves toward left/bottom */
+    -webkit-mask-image: linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
+    mask-image: linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
 }
 
-.hero-viz::before {
-    top: -7px;
-    left: -5px;
-}
-
-.hero-viz::after {
-    bottom: -7px;
-    right: -5px;
+.hero-gradient {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* static fallback shown before/without WebGL */
+    background:
+        radial-gradient(60% 70% at 80% 8%, var(--gradient-color-4), transparent 60%),
+        radial-gradient(55% 65% at 40% 80%, var(--gradient-color-3), transparent 62%),
+        linear-gradient(235deg, var(--gradient-color-2), var(--gradient-color-1));
 }
 
 @keyframes heroFade {
@@ -603,18 +607,9 @@ ul {
     .hero-sub,
     .hero-actions,
     .hero-tagline,
-    .hero-viz {
+    .hero-gradient-wrap {
         animation: none;
     }
-}
-
-.hero-viz svg {
-    display: block;
-}
-
-#heroLottie {
-    width: 100%;
-    aspect-ratio: 1004 / 700;
 }
 
 /* ─── TRANSFORMATION BAND ──────────────────────────── */
@@ -626,6 +621,7 @@ ul {
     padding-block: clamp(30px, 4.5vw, 50px);
     margin-top: clamp(40px, 5vw, 64px);
     position: relative;
+    z-index: 2;
 }
 
 /* faint blueprint grid, fading from the centre */
@@ -1705,13 +1701,13 @@ a.contact-item:hover {
 
 /* ─── RESPONSIVE ───────────────────────────────────── */
 @media (max-width: 1020px) {
-    .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 56px;
-    }
-
-    .hero-viz {
-        max-width: 660px;
+    /* stacked layout: gradient becomes a top banner that fades downward
+       so it never sits behind the body copy */
+    .hero-gradient-wrap {
+        width: 116%;
+        height: clamp(320px, 52vh, 560px);
+        -webkit-mask-image: linear-gradient(196deg, #000 22%, rgba(0, 0, 0, 0.45) 50%, transparent 76%);
+        mask-image: linear-gradient(196deg, #000 22%, rgba(0, 0, 0, 0.45) 50%, transparent 76%);
     }
 
     .proof-grid {
@@ -1751,6 +1747,13 @@ a.contact-item:hover {
 
     .nav-toggle {
         display: flex;
+    }
+
+    /* phones: shorter top band, fully clear of the headline + paragraph */
+    .hero-gradient-wrap {
+        height: clamp(260px, 40vh, 380px);
+        -webkit-mask-image: linear-gradient(192deg, #000 18%, transparent 66%);
+        mask-image: linear-gradient(192deg, #000 18%, transparent 66%);
     }
 
     /* transform band stacks vertically with a downward connector */
