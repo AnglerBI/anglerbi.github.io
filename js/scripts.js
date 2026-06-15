@@ -133,18 +133,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ── Hero Lottie animation ────────────────────────
-    const lottieEl = document.getElementById('heroLottie');
-    if (lottieEl && window.lottie) {
-        const anim = window.lottie.loadAnimation({
-            container: lottieEl,
-            renderer: 'svg',
-            loop: true,
-            autoplay: !reducedMotion,
-            path: '/assets/hero-flow.json'
-        });
+    // ── Hero animated gradient (WebGL mesh) ──────────
+    const heroCanvas = document.getElementById('heroGradient');
+    if (heroCanvas && window.Gradient) {
         if (reducedMotion) {
-            anim.addEventListener('DOMLoaded', () => anim.goToAndStop(90, true));
+            // leave the static CSS-gradient fallback in place, no motion
+            heroCanvas.classList.add('is-static');
+        } else {
+            new window.Gradient().initGradient('#heroGradient');
         }
     }
 });

@@ -51,6 +51,10 @@
      HERO
 ══════════════════════════════════════════════ -->
     <section id="hero">
+        <!-- Flowing WebGL mesh gradient; bleeds behind the nav + off the right edge (Stripe-style) -->
+        <div class="hero-gradient-wrap" aria-hidden="true">
+            <canvas id="heroGradient" class="hero-gradient"></canvas>
+        </div>
         <div class="hero-inner container">
             <div class="hero-copy">
                 <h1 class="hero-headline">
@@ -74,11 +78,6 @@
                     </a>
                 </div>
                 <p class="hero-tagline"><b>Turning insights</b> into action</p>
-            </div>
-
-            <!-- Hero animation: data flow (Lottie, brand palette) -->
-            <div class="hero-viz" aria-hidden="true">
-                <div id="heroLottie"></div>
             </div>
         </div>
 
@@ -523,7 +522,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="js/hero-gradient.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
