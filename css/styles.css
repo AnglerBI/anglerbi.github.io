@@ -214,16 +214,56 @@ ul {
     right: 0;
     z-index: 100;
     height: var(--nav-h);
-    transition: background 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
-    border-bottom: 1px solid transparent;
-    background: rgba(251, 252, 253, 0.6);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    background: rgba(251, 252, 253, 0.2);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+#mainNav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 32px;
+    background: rgba(251, 252, 253, 0.18);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black, transparent);
+    pointer-events: none;
+    transition: background 0.4s var(--ease);
 }
 
 #mainNav.scrolled {
-    background: rgba(251, 252, 253, 0.88);
-    border-bottom-color: var(--hairline);
+    background: rgba(251, 252, 253, 0.72);
+}
+
+#mainNav.scrolled::after {
+    background: rgba(251, 252, 253, 0.65);
+}
+
+@media (max-width: 768px) {
+    #mainNav {
+        background: rgba(251, 252, 253, 0.82);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+    }
+
+    #mainNav::after {
+        background: rgba(251, 252, 253, 0.72);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+
+    #mainNav.scrolled {
+        background: rgba(251, 252, 253, 0.92);
+    }
+
+    #mainNav.scrolled::after {
+        background: rgba(251, 252, 253, 0.82);
+    }
 }
 
 .nav-inner {
@@ -447,6 +487,18 @@ ul {
     background: var(--paper);
 }
 
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 260px;
+    background: linear-gradient(to bottom, transparent, var(--paper) 72%);
+    z-index: 1;
+    pointer-events: none;
+}
+
 .hero-inner {
     position: relative;
     z-index: 2;
@@ -572,9 +624,15 @@ ul {
     z-index: 0;
     pointer-events: none;
     animation: heroFade 1.4s 0.1s var(--ease) both;
-    /* diagonal feather: solid upper-right, dissolves toward left/bottom */
-    -webkit-mask-image: linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
-    mask-image: linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
+    /* diagonal + vertical bottom fade: dissolves toward left and toward bottom */
+    -webkit-mask-image:
+        linear-gradient(to bottom, #000 64%, transparent 90%),
+        linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
+    mask-image:
+        linear-gradient(to bottom, #000 64%, transparent 90%),
+        linear-gradient(248deg, #000 32%, rgba(0, 0, 0, 0.60) 54%, transparent 76%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
 
 .hero-gradient {
@@ -614,8 +672,6 @@ ul {
 
 /* ─── TRANSFORMATION BAND ──────────────────────────── */
 .transform-band {
-    border-top: 1px solid var(--hairline);
-    border-bottom: 1px solid var(--hairline);
     background: var(--white);
     overflow: hidden;
     padding-block: clamp(30px, 4.5vw, 50px);
@@ -637,6 +693,18 @@ ul {
     mask-image: radial-gradient(ellipse 62% 130% at 50% 50%, #000, transparent 76%);
     opacity: 0.55;
     pointer-events: none;
+}
+
+.transform-band::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: linear-gradient(to bottom, var(--paper), transparent);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .transform-inner {
@@ -774,6 +842,19 @@ ul {
 /* ─── PROOF / STATS ────────────────────────────────── */
 #proof {
     background: var(--paper);
+    position: relative;
+}
+
+#proof::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--paper));
+    pointer-events: none;
+    z-index: 3;
 }
 
 .proof-grid {
