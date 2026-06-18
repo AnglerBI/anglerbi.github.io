@@ -994,7 +994,7 @@ ul {
 
 /* ─── SERVICES ─────────────────────────────────────── */
 #services {
-    background: var(--paper-2);
+    background: linear-gradient(180deg, #f1f6fa 0%, #f4f7f9 100%);
     border-top: 1px solid var(--hairline);
     border-bottom: 1px solid var(--hairline);
 }
@@ -1006,28 +1006,40 @@ ul {
 }
 
 .service-card {
-    background: var(--white);
     border: 1px solid var(--hairline);
     border-radius: var(--radius-lg);
-    padding: 38px 32px;
+    padding: 0;
     position: relative;
     overflow: hidden;
+    background: var(--white);
     box-shadow: var(--shadow-card);
     transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.45s var(--ease);
+    display: flex;
+    flex-direction: column;
 }
 
-/* cyan gradient hairline that wipes in along the top edge on hover */
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--grad);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s var(--ease);
+/* Per-card base tint shown behind the frosted content panel */
+.service-card--data    { background: #eef8fd; }
+.service-card--workflow { background: #e7f3fb; }
+.service-card--ai      { background: #e6eef9; }
+
+/* Screenshot header — the crisp "picture" that brings contrast */
+.card-media {
+    position: relative;
+    height: 158px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+}
+
+.service-card--data .card-media    { background: #f3f2f1; }
+.service-card--workflow .card-media { background: #1e1e2e; }
+.service-card--ai .card-media      { background: #0d1117; }
+
+.card-screenshot {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .service-card:hover {
@@ -1036,55 +1048,48 @@ ul {
     box-shadow: var(--shadow-lift);
 }
 
-.service-card:hover::before {
-    transform: scaleX(1);
-}
-
-.service-card>* {
+/* Frosted glass panel holding the text, sliding up over the screenshot */
+.card-content {
     position: relative;
-}
-
-.service-num {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: var(--accent-ink);
-}
-
-.service-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: var(--tint-1);
-    border: 1px solid var(--tint-2);
+    z-index: 1;
+    margin-top: -34px;
+    border-radius: 20px 20px 0 0;
+    padding: 36px 30px 32px;
+    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 22px;
-    color: var(--accent-ink);
-    transition: transform 0.4s var(--ease-spring), background 0.4s var(--ease), border-color 0.4s var(--ease);
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        0 -10px 24px -12px rgba(8, 40, 70, 0.12);
 }
 
-.service-card:hover .service-icon {
-    transform: translateY(-3px) rotate(-5deg);
-    background: var(--tint-2);
-    border-color: var(--tint-3);
-}
+/* per-card frosted tint over the picture */
+.service-card--data .card-content    { background: rgba(238, 248, 253, 0.60); }
+.service-card--workflow .card-content { background: rgba(231, 243, 251, 0.60); }
+.service-card--ai .card-content      { background: rgba(230, 238, 249, 0.60); }
 
 .service-card h3 {
     font-size: 1.38rem;
     font-weight: 640;
     letter-spacing: -0.025em;
     line-height: 1.2;
-    margin-top: 24px;
+    margin-top: 0;
     color: var(--ink);
+    /* reserve 2 lines so single- and double-line headings align across cards */
+    min-height: calc(1.38rem * 1.2 * 2);
 }
 
-.service-card>p {
+.service-card>p,
+.card-content>p {
     color: var(--muted);
     font-size: 0.98rem;
     margin-top: 14px;
+    /* reserve up to 4 lines so the divider + bullets sit at a shared
+       baseline across cards regardless of paragraph length */
+    min-height: calc(0.98rem * 1.6 * 4);
 }
 
 .service-list {
@@ -1095,20 +1100,31 @@ ul {
     padding-top: 24px;
 }
 
+.service-card--workflow .service-list { border-color: #b4d9f1; }
+.service-card--ai .service-list       { border-color: #bcd3ee; }
+
 .service-list li {
     font-size: 0.92rem;
     color: var(--ink-2);
     display: flex;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
 }
 
 .service-list li::before {
-    content: '→';
-    color: var(--accent-ink);
-    font-size: 0.85rem;
-    flex-shrink: 0;
+    display: none;
 }
+
+.service-list-icon {
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+    flex-shrink: 0;
+    color: var(--accent-ink);
+}
+
+.service-card--workflow .service-list-icon { color: #0a78ab; }
+.service-card--ai .service-list-icon       { color: #0a5f93; }
 
 /* ─── APPROACH / PROCESS ───────────────────────────── */
 #work {
